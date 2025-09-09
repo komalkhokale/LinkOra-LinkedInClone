@@ -1,0 +1,150 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 84svh;
+  background-color: #f5f5f5;
+}
+
+.cardContainer {
+  height: 80vh;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80vw;
+  background: white;
+  box-shadow: 10px 10px 15px rgba(173, 173, 173);
+}
+
+.cardContainer_left {
+  flex: 0.6;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cardLeft_heading {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.errorMsg {
+  margin-top: 0.8rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputField {
+  flex: 1;
+  padding: 0.8rem;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #0f4d5c53;
+}
+
+.buttonWithOutline {
+  margin-top: 1.3rem;
+  border-radius: 0.5rem;
+  border: 1.6px solid #147596;
+  color: #147596;
+  font-size: 1.1rem;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  letter-spacing: 1px;
+  width: 100%;
+  text-transform: uppercase;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonWithOutline:hover {
+  background: #147596;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.cardContainer_right {
+  flex: 0.4;
+  background-color: #0f4c5c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.buttonWithOutline2 {
+  margin-top: 1.3rem;
+  border-radius: 0.5rem;
+  border: 1.6px solid #f1fbffd3;
+  color: #000000;
+  background-color: #e1f3fa;
+  font-size: 1.1rem;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.7vw 3vw;
+  letter-spacing: 1px;
+  width: 100%;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .cardContainer {
+    width: 95vw;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .cardContainer_left,
+  .cardContainer_right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .inputRow {
+    flex-direction: column; /* inputs ek ke niche */
+    gap: 0.7rem;
+  }
+
+  .buttonWithOutline2 {
+    padding: 12px 20px; /* vw hatake px use */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardLeft_heading {
+    font-size: 1.4rem;
+  }
+
+  .inputField {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .buttonWithOutline,
+  .buttonWithOutline2 {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}

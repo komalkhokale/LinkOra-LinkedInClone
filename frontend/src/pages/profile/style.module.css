@@ -1,0 +1,447 @@
+.container {
+  padding: 1.3rem;
+  background-color: rgba(246, 255, 255, 0.447);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.backDropContainer {
+  width: 100%;
+  height: 30vh;
+  background: url("https://images.pexels.com/photos/13686832/pexels-photo-13686832.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+}
+
+.backDropContainer img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  border: 5px solid white;
+  text-align: center;
+}
+
+/* .backDrop::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10em; 
+    height: 10em;
+    background-color: black;
+    z-index: 3;
+    position: absolute;
+    bottom: -30%;
+    left: 8%;
+    border-radius: 50%;
+} */
+
+.backDrop_overlay {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  border: 5px solid white;
+  text-align: center;
+  z-index: 3;
+  transition: all 0.4s;
+  color: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backDrop_overlay > svg {
+  height: 1.2rem;
+  width: 2rem;
+}
+
+.backDrop_overlay:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  background: black;
+}
+
+.profileContainer_details {
+  padding-top: 5rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  width: 20vw;
+}
+
+.card_profileContainer {
+  display: flex;
+}
+
+.card_profileContainer > img {
+  width: 5rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.2rem;
+}
+
+.workHistory_container {
+  display: flex;
+  gap: 1.4rem;
+  padding-top: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.workHistoryCard {
+  min-width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.2rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  border: #b7edff 1px solid;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileContainer_details input {
+  outline: none;
+  border-style: none;
+  padding-inline: 10px;
+  padding-block: 9px;
+}
+
+.nameEdit {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.updateProfileBtn {
+  padding-inline: 0.8rem;
+  padding-block: 0.5rem;
+  background: #147596;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  width: fit-content;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* bas thoda gap */
+  width: 100%;
+}
+
+.nameEdit {
+  flex: 0 1 auto; /* shrink hone de */
+  max-width: 200px; /* limit de do (apne design ke hisaab se) */
+}
+
+.top p {
+  margin: 0;
+  color: gray;
+  flex-shrink: 0; /* username apna jagah rakhe */
+}
+
+.profileContainer_details textarea {
+  outline: none;
+  border: none;
+  padding-inline: 10px;
+  padding-block: 9px;
+  font-family: poppins;
+}
+
+.addWorkButton {
+  padding-inline: 0.8rem;
+  height: 2.5vw;
+  background: #147596;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-family: poppins;
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.allCommentsContainer {
+  width: 40vw;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2rem;
+}
+
+.inputField {
+  flex: 1; /* first two inputs share equal width */
+  padding: 0.8rem;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #0f4d5c53;
+  font-family: poppins;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  resize: none; /* Resize disable kar diya */
+  width: 100%;
+}
+
+.updateEducationBtn{
+
+  padding-inline: 0.8rem;
+  padding-block: 0.5rem;
+  background: #147596;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  width: fit-content;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .backDropContainer {
+    height: 25vh;
+  }
+
+  .backDropContainer img,
+  .backDrop_overlay {
+    width: 8em;
+    height: 8em;
+    bottom: -25%;
+    left: 6%;
+  }
+
+  .card {
+    width: 40vw;
+    gap: 1rem;
+  }
+
+  .card_profileContainer > img {
+    width: 4rem;
+  }
+
+  .workHistoryCard {
+    min-width: 100px;
+    font-size: 0.85rem;
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
+    margin-top: 0.4rem;
+  }
+
+  .allCommentsContainer {
+    width: 60vw;
+    padding: 1.5rem;
+  }
+
+  .addWorkButton,
+  .updateProfileBtn,
+  .updateEducationBtn {
+    font-size: 0.85rem;
+    padding-inline: 0.6rem;
+    padding-block: 0.4rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .backDropContainer {
+    height: 20vh;
+  }
+
+  .backDropContainer img,
+  .backDrop_overlay {
+    width: 6em;
+    height: 6em;
+    bottom: -20%;
+    left: 4%;
+  }
+
+  .card {
+    width: 80vw;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .card_profileContainer > img {
+    width: 3.5rem;
+  }
+
+  .workHistoryCard {
+    min-width: 90px;
+    font-size: 0.75rem;
+    padding-inline: 0.6rem;
+    padding-block: 0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .allCommentsContainer {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .addWorkButton,
+  .updateProfileBtn,
+  .updateEducationBtn {
+    font-size: 0.75rem;
+    padding-inline: 0.5rem;
+    padding-block: 0.3rem;
+  }
+
+  .profileContainer_details input,
+  .profileContainer_details textarea {
+    font-size: 0.9rem;
+    padding-inline: 8px;
+    padding-block: 6px;
+  }
+
+  .nameEdit {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Tablet responsiveness */
+@media screen and (max-width: 1024px) {
+  .profileContainer_details > div {
+    flex-direction: column; /* stack left and right */
+    gap: 1rem;
+  }
+
+  .profileContainer_details textarea {
+    width: 100%;
+  }
+
+  .workHistory_container {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .workHistoryCard {
+    min-width: 45%; /* 2 cards per row on tablet */
+    font-size: 0.9rem;
+  }
+
+  .addWorkButton,
+  .updateProfileBtn,
+  .updateEducationBtn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .postCard {
+    width: 100%; /* recent activity cards full width */
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .profileContainer_details > div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .profileContainer_details input.nameEdit {
+    font-size: 1.2rem;
+  }
+
+  .profileContainer_details textarea {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .workHistory_container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .workHistoryCard {
+    min-width: 100%; /* one card per row on mobile */
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .addWorkButton,
+  .updateProfileBtn,
+  .updateEducationBtn {
+    font-size: 0.85rem;
+    width: 90%;
+    height: auto;
+  }
+
+  /* Recent Activity column */
+  .profileContainer_details > div > div:nth-child(2) {
+    width: 100%;
+  }
+
+  .postCard {
+    width: 100%;
+  }
+
+  .card {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .card_profileContainer > img {
+    width: 3.5rem;
+    height: auto;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+}

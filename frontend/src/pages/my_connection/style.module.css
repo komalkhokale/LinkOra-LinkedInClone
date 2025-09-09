@@ -1,0 +1,103 @@
+.userCard {
+  display: flex;
+  width: 80%;
+  gap: 1.2rem;
+  padding: 1.3rem;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c7ebfca8;
+  border-radius: 8px;
+  margin: 2rem auto; /* center on desktop */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.userCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profilePicture > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 2px solid #e6f9ff;
+  transition: transform 0.2s ease;
+}
+
+.profilePicture > img:hover {
+  transform: scale(1.05);
+}
+
+.myConnection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.connectedButton {
+  padding-inline: 0.8rem;
+  padding-block: 0.5rem;
+  background: #e6f9ff;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  color: #0a6f91;
+  border: 1px solid #0a6f91;
+  cursor: pointer;
+  margin: 10px 0;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.connectedButton:hover {
+  background: #0a6f91;
+  color: white;
+}
+
+.network {
+  margin-top: 2rem;
+  padding-inline: 2rem;
+}
+
+/* ✅ Responsive styles */
+@media screen and (max-width: 1024px) {
+  .userCard {
+    width: 90%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+
+  .profilePicture > img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .userCard {
+    flex-direction: column; /* stack content vertically */
+    align-items: flex-start;
+    width: 95%;
+    margin: 1rem auto;
+    gap: 0.8rem;
+  }
+
+  .profilePicture > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* mobile me circle better lagega */
+  }
+
+  .connectedButton {
+    width: fit-content; /* full width button */
+    text-align: center;
+    margin-top: 0.8rem;
+  }
+
+  .userCard {
+    padding: 0.8rem;
+  }
+}

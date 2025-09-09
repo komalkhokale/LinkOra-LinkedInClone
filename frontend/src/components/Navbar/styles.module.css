@@ -1,0 +1,86 @@
+
+.container{
+padding: 1.7rem;
+}
+
+.logo{
+    color: #147596;
+}
+.logo1{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBarOptionContainer{
+    display: flex;
+}
+
+.buttonJoin{
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    background-color: #147596;
+    padding:0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    color: white;
+}
+
+.buttonJoin:hover{
+    background-color: #0F4C5C;
+}
+
+
+/* Mobile responsiveness for header/nav */
+@media screen and (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .logo1 {
+      font-size: 1.5rem;
+    }
+  
+    .navBar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+  
+    .navBarOptionContainer {
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+    }
+  
+    .buttonJoin {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Extra small screens (phones) */
+  @media screen and (max-width: 480px) {
+    .logo1 {
+      font-size: 1.3rem;
+    }
+  
+    .buttonJoin {
+      font-size: 0.85rem;
+      padding: 0.4rem 0;
+    }
+  
+    .navBarOptionContainer {
+      gap: 0.3rem;
+      display: none;
+    }
+  }
+  
